@@ -1,12 +1,16 @@
 package com.educandoweb.course.entities;
 
 import java.io.Serializable;
+
 import java.util.Objects;
+
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,7 +20,7 @@ public class User implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String name;
 	private String email;
 	private String phone;
@@ -27,7 +31,7 @@ public class User implements Serializable{
 	}
 
 
-	public User(long id, String name, String email, String phone, String password) {
+	public User(Long id, String name, String email, String phone, String password) {
 		super();
 		this.id = id;
 		this.name = name;
